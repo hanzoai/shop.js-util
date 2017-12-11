@@ -1,4 +1,6 @@
 # akasha [![NPM version][npm-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependency Status][dependency-img]][dependency-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/hanzoai/shop.js-util.svg?token=b29efc39e11191b7eeca81698d2766e9591979a001e88a7086964c78b725a181&ts=1513017972234)](https://greenkeeper.io/)
 Cross-browser storage with cookie-based fallback. Inspired by
 [store.js](https://github.com/marcuswestin/store.js/).
 

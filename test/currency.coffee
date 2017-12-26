@@ -8,6 +8,7 @@ global.window = {
 
 {
   isZeroDecimal
+  isCrypto
   renderUpdatedUICurrency
   renderUICurrencyFromJSON
   renderJSONCurrencyFromUI
@@ -19,6 +20,14 @@ describe 'currency.isZeroDecimal', ->
     ret.should.eq false
 
     ret = isZeroDecimal 'jpy'
+    ret.should.eq true
+
+describe 'currency.isCrypto', ->
+  it 'should work', ->
+    ret = isCrypto 'usd'
+    ret.should.eq false
+
+    ret = isCrypto 'eth'
     ret.should.eq true
 
 describe 'currency.renderUICurrencyFromJSON', ->

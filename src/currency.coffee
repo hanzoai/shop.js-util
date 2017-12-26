@@ -5,6 +5,7 @@ digitsOnlyRe = new RegExp('[^\\d.-]', 'g')
 
 currencySigns = currencies.data
 
+# Does the currency support decimal notation
 export isZeroDecimal = (code)->
   code = code.toLowerCase() if code
 
@@ -12,13 +13,17 @@ export isZeroDecimal = (code)->
     return true
   return false
 
+# Is the currency code a crypto currency?
+export isCrypto = (code)->
+  return code == 'eth' || code == 'btc' || code =='xbt'
+
+# Convert humanized currency format to data format back to currency format
 export renderUpdatedUICurrency = (code, uiCurrency) ->
   code = code.toLowerCase() if code
 
-  currentCurrencySign = currencySigns[code]
+  return renderUICurrencyFromJSON code, Util.renderJSONCurrencyFromUI(uiCurrency)
 
-  return renderUICurrencyFromJSON Util.renderJSONCurrencyFromUI(uiCurrency)
-
+# Convert data format to humanized format
 export renderUICurrencyFromJSON = (code, jsonCurrency) ->
   code = code.toLowerCase() if code
 
@@ -43,6 +48,7 @@ export renderUICurrencyFromJSON = (code, jsonCurrency) ->
 
   return currentCurrencySign + jsonCurrency.substr(0, jsonCurrency.length - 2) + '.' + jsonCurrency.substr(-2)
 
+# Convert humanized format to data format
 export renderJSONCurrencyFromUI = (code, uiCurrency) ->
   code = code.toLowerCase() if code
 

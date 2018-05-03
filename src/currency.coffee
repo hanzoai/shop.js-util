@@ -21,7 +21,7 @@ export isCrypto = (code)->
 export renderUpdatedUICurrency = (code, uiCurrency) ->
   code = code.toLowerCase() if code
 
-  return renderUICurrencyFromJSON code, Util.renderJSONCurrencyFromUI(uiCurrency)
+  return renderUICurrencyFromJSON code, renderJSONCurrencyFromUI(code, uiCurrency)
 
 # Convert data format to humanized format
 export renderUICurrencyFromJSON = (code, jsonCurrency) ->

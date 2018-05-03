@@ -113,5 +113,7 @@ export default {
     'rub':'руб'
     'inr':''
     'try':''
-    ''   : ''
+    'pnt': ''
+    'btc': ''
+    'eth': ''
 }

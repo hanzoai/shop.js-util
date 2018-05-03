@@ -32,6 +32,11 @@ describe 'currency.isCrypto', ->
 
 describe 'currency.renderUICurrencyFromJSON', ->
   it 'should work for standard currency', ->
+    ret = renderUpdatedUICurrency 'usd', '$1234.56'
+    ret.should.eq '$1234.56'
+
+describe 'currency.renderUICurrencyFromJSON', ->
+  it 'should work for standard currency', ->
     ret = renderUICurrencyFromJSON 'usd', 123456
     ret.should.eq '$1234.56'
 

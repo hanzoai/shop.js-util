@@ -3,8 +3,8 @@
   "version": "0.0.7",
   "description": "Utilities for Shop.js.",
   "main": "lib/shop.js-util.js",
-  "module": "lib/shop.js-util.mjs",
-  "js:next": "lib/shop.js-util.mjs",
+  "module": "lib/shop.js-util.es.js",
+  "js:next": "lib/shop.js-util.es.js",
   "files": [
     "lib/",
     "src/"
